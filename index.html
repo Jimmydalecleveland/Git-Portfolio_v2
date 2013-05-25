@@ -32,12 +32,12 @@
                 <div id="portfolio" class="portfolio-section">
 
                    
-                    <!-- 1st Panel -->
+                    <!-- Cottages of Hope -->
                     <div class="panel">
                         <div class="image-panel">
-                            <img src="coh1.png" alt="afaf1" class="hero-pic" />
-                            <img src="coh2.png" alt="afaf2" class="sub-pic-left" />
-                            <img src="coh3.png" alt="afaf3" class="sub-pic-right" />
+                            <img src="coh1.png" alt="coh1" class="hero-pic" />
+                            <img src="coh2.png" alt="coh2" class="sub-pic-left" />
+                            <img src="coh3.png" alt="coh3" class="sub-pic-right" />
                         </div>
                         <div class="side-panel-top">
                             <h2>Cottages of Hope</h2>
@@ -51,12 +51,36 @@
                             <div class="tag">ASP.NET</div>
                             <div class="tag">MVC</div>
                             <div class="tag">Visual Studio</div>                           
-                            <div class="tag">JQuery</div>
+                            <div class="tag">TFS</div>
                             <div class="tag">Photoshop</div>
                         </div>
                     </div>
 
-                    <!-- 2nd Panel -->
+                    <!-- FancyGiraffe -->
+                    <div class="panel">
+                        <div class="image-panel">
+                            <img src="fg1.png" alt="fg1" class="hero-pic" />
+                            <img src="fg2.png" alt="fg2" class="sub-pic-left" />
+                            <img src="fg3.png" alt="fg3" class="sub-pic-right" />
+                        </div>
+                        <div class="side-panel-top">
+                            <h2>FancyGiraffe</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sit amet felis eros. Pellentesque scelerisque dolor ut est rhoncus sit amet                                        placerat tellus congue. Suspendisse felis tellus, accumsan iaculis elementum non, euismod et mi. Nulla cursus accumsan erat, at placerat nulla                                      placerat quis. Quisque non elit nec ligula feugiat pellentesque eu et quam. Nam gravida, enim id fermentum dictum, urna nibh sodales mauris, eget                                   porttitor nulla mi.
+                            </p>
+                            <a class="portfolio-link" href="#">VISIT</a>
+                        </div>
+                        <div class="side-panel-bottom">
+                            <div style="padding: 5px 15px 0 15px; line-height: 18px; color: #FF7F00; font-family: 'Share Tech', sans-serif; font-size: 18px;">Tags</div>
+                            <div class="tag">Java EE</div>
+                            <div class="tag">SQL</div>
+                            <div class="tag">MVC</div>
+                            <div class="tag">NetBeans</div>                           
+                            <div class="tag">phpMyAdmin</div>
+                            <div class="tag">Tortoise SVN</div>
+                        </div>
+                    </div>
+
+                    <!-- Anything for a Friend -->
                     <div class="panel">
                         <div class="image-panel">
                             <img src="afaf1.png" alt="afaf1" class="hero-pic" />
@@ -80,7 +104,7 @@
                         </div>
                     </div>
 
-                    <!-- 3rd Panel -->
+                    <!-- Office Media Player -->
                     <div class="panel">
                         <div class="image-panel">
                             <img src="mediaplayer1.png" alt="mediaplayer1" class="hero-pic" />
@@ -107,6 +131,9 @@
                 </div><!-- /portfolio-section -->
                 <div id="contact" class="contact-section">
                     <h1>Contact Info</h1>
+                    <img src="Contact_Address_dark.png" class="address-icon" alt="contact icon" height="75" width="75"/><div class="address-info">5376 South 300 West<br />Washington Terrace, UT 84405</div><br />
+                    <img src="Contact_Mail_dark.png" alt="contact icon" class="mail-icon" height="75" width="75"/><div class="mail-info">jimmydalecleveland@gmail.com</div>
+                    <img src="Contact_Phone_dark.png" alt="contact icon" height="75" class="phone-icon" width="75"/><div class="phone-info">801-452-3265</div>
                 </div>
 
             </div><!-- /panel-wrapper -->
@@ -117,14 +144,7 @@
         <!-- Scripts -->
         <script type="text/javascript" src="jquery-1.9.1.min.js"></script>
         <script type="text/javascript" src="jquery.mousewheel.js"></script>
-        <script>
-
-
-
-
-            
-            
-            
+        <script>   
             
             $(".nav-links li").on("click", function () {
                 var width = 1200 // Width of each section
@@ -139,8 +159,8 @@
             $(document).ready(function () {
                 $('#container')
                 .bind('mousewheel', function (event, delta) {
-                    val = this.scrollLeft - (delta * 600);
-                    jQuery(this).stop().animate({ scrollLeft: val }, 400);
+                    val = this.scrollLeft - (delta * 500);
+                    jQuery(this).stop().animate({ scrollLeft: val }, 100);
                     event.preventDefault();
                 });
             });
@@ -150,14 +170,6 @@
             //        event.preventDefault();
             //    });
             //});
-            //function goto(id, t) {
-            //    // animate to div #
-            //    $(".panel-wrapper").animate({ "left": -($(id).position().left) }, 600);
-            //    // remove "active" class from all nav-links
-            //    $('.nav-links a').removeClass('active');
-            //    // add "active" class to current nav-link
-            //    $(t).addClass('active');
-            //}
         </script>
     </body>
 </html>
