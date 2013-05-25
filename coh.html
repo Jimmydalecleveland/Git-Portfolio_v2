@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <link href="http://fonts.googleapis.com/css?family=Share+Tech" rel="stylesheet" type="text/css">
+        <link href="http://fonts.googleapis.com/css?family=Share+Tech+Mono" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <title>Jimmy Cleveland</title>
+    </head>
+    <body>
+        <!-- nav-bar -->
+        <div class="header">
+            <div class="nav-container">
+                <div class="breadcrumbs">
+                    <ul>
+                        <li class="home"><a href="index.html">Home &nbsp</a></li>
+                        <li> > </li>
+                        <li style="color: #FF7F00">&nbsp Cottages of Hope</li>
+                    </ul>
+                </div>
+            </div>
+        </div><!-- /nav-bar -->
+        <!-- container -->
+        <div id="container">
+            <!-- panel-wrapper -->
+            <div class="panel-wrapper">
+                
+                <div id="portfolio" class="portfolio-section">
+
+                   
+                    <!-- 1st Panel -->
+                    <div class="panel">
+                        <div class="image-panel-large">
+                            <img src="coh4.png" alt="coh4" />
+                        </div>
+                    </div>
+
+                    <!-- 2nd Panel -->
+                    <div class="panel-condensed">
+                        <div class="image-panel-large">
+                            <img src="coh5.png" alt="coh5" />
+                        </div>
+                    </div>
+
+                    <!-- 3rd Panel -->
+                    <div class="panel-condensed">
+                        <div class="image-panel-large">
+                            <img src="coh6.png" alt="coh6" />
+                        </div>
+                    </div>
+
+                    <!-- 4th Panel -->
+                    <div class="panel-condensed">
+                        <div class="image-panel-large">
+                            <img src="coh7.png" alt="coh7" />
+                        </div>
+                    </div>
+
+                </div><!-- /portfolio-section -->
+                
+
+            </div><!-- /panel-wrapper -->
+        </div><!-- /container -->
+        <!-- footer -->
+        <div class="footer">
+        </div><!-- /footer -->
+        <!-- Scripts -->
+        <script type="text/javascript" src="jquery-1.9.1.min.js"></script>
+        <script type="text/javascript" src="jquery.mousewheel.js"></script>
+        <script>
+
+
+
+
+            
+            
+            
+            
+            $(".nav-links li").on("click", function () {
+                var width = 1200 // Width of each section
+                var index = $(this).index();
+                var position = width * index;
+                $("#container").animate({ scrollLeft: position });
+                $(".nav-links li").removeClass('active');
+                $(this).addClass('active');
+            });
+            
+            // jquery mousewheel scroll horizontal
+            $(document).ready(function () {
+                $('#container')
+                .bind('mousewheel', function (event, delta) {
+                    val = this.scrollLeft - (delta * 600);
+                    jQuery(this).stop().animate({ scrollLeft: val }, 400);
+                    event.preventDefault();
+                });
+            });
+            //$(function () {
+            //    $("html, body, *").mousewheel(function (event, delta) {
+            //        this.scrollLeft -= (delta * 30);
+            //        event.preventDefault();
+            //    });
+            //});
+            //function goto(id, t) {
+            //    // animate to div #
+            //    $(".panel-wrapper").animate({ "left": -($(id).position().left) }, 600);
+            //    // remove "active" class from all nav-links
+            //    $('.nav-links a').removeClass('active');
+            //    // add "active" class to current nav-link
+            //    $(t).addClass('active');
+            //}
+        </script>
+    </body>
+</html>
