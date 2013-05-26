@@ -5,6 +5,7 @@
         <link href="http://fonts.googleapis.com/css?family=Share+Tech" rel="stylesheet" type="text/css">
         <link href="http://fonts.googleapis.com/css?family=Share+Tech+Mono" rel="stylesheet" type="text/css">
         <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" type="text/css" href="jquery.jscrollpane.css">
         <title>Jimmy Cleveland</title>
     </head>
     <body>
@@ -23,6 +24,7 @@
         </div><!-- /nav-bar -->
         <!-- container -->
         <div id="container">
+            <div id="scrollable">
             <!-- panel-wrapper -->
             <div class="panel-wrapper">
                 <div id="home" class="home-section">
@@ -89,7 +91,11 @@
                         </div>
                         <div class="side-panel-top">
                             <h2>Anything For a Friend</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sit amet felis eros. Pellentesque scelerisque dolor ut est rhoncus sit amet                                        placerat tellus congue. Suspendisse felis tellus, accumsan iaculis elementum non, euismod et mi. Nulla cursus accumsan erat, at placerat nulla                                      placerat quis. Quisque non elit nec ligula feugiat pellentesque eu et quam. Nam gravida, enim id fermentum dictum, urna nibh sodales mauris, eget                                   porttitor nulla mi.
+                            <p>Anything For A Friend is a community fundraising organization started by Becky Anderson. 
+                                They help tragedy stricken families raise money to help with the financial strain of medical 
+                                bills amassed while trying to save a loved one's life.<br /><br />
+                                This project was for a capstone course and included over 30 students. We were very excited 
+                                to be able to help such a great organization
                             </p>
                             <a class="portfolio-link" href="afaf.html">See More</a>
                         </div>
@@ -137,6 +143,7 @@
                 </div>
 
             </div><!-- /panel-wrapper -->
+                </div>
         </div><!-- /container -->
         <!-- footer -->
         <div class="footer">
@@ -144,8 +151,13 @@
         <!-- Scripts -->
         <script type="text/javascript" src="jquery-1.9.1.min.js"></script>
         <script type="text/javascript" src="jquery.mousewheel.js"></script>
-        <script>   
-            
+        <script type="text/javascript" src="jquery.jscrollpane.min.js"></script>
+        <script>
+
+            $(function () {
+                $('#container').jScrollPane();
+            })
+
             $(".nav-links li").on("click", function () {
                 var width = 1200 // Width of each section
                 var index = $(this).index();
@@ -154,13 +166,13 @@
                 $(".nav-links li").removeClass('active');
                 $(this).addClass('active');
             });
-            
+
             // jquery mousewheel scroll horizontal
             $(document).ready(function () {
                 $('#container')
                 .bind('mousewheel', function (event, delta) {
                     val = this.scrollLeft - (delta * 500);
-                    jQuery(this).stop().animate({ scrollLeft: val }, 100);
+                    jQuery(this).stop().animate({ scrollLeft: val }, 300);
                     event.preventDefault();
                 });
             });

@@ -132,10 +132,9 @@ p
     bottom: 90px;
     left: 0;
     right: 0;
-    overflow-x: scroll;
-    overflow-y: hidden;
+    overflow: hidden;
     white-space: normal;
-    min-height: 530px;  /* Height of panel-wrapper */
+
 }
 
 .panel-wrapper
@@ -143,9 +142,9 @@ p
     position: absolute;
     left: 0;
     top: 50%;
-    width: 7200px;
     height: 530px;
-    margin-top: -300px;
+    width: 7200px;
+    margin-top: -295px;
 }
 
 .home-section, .portfolio-section, .contact-section
@@ -345,22 +344,27 @@ p
 }
 
 /* Scrollbar */
-::-webkit-scrollbar 
+/*::-webkit-scrollbar 
 {
- width: 10px;
- height: 2px;
- z-index: 6;
+     width: 10px;
+     height: 10px;
+     z-index: 6;
 }
+::-webkit-scrollbar:horizontal:hover 
+{
+  height: 2px; 
+}
+
 ::-webkit-scrollbar-button:start:decrement,
 ::-webkit-scrollbar-button:end:increment  
 {
- display: none;
+    display: none;
 }
 ::-webkit-scrollbar-track-piece  
 {
- background-color: rgba(99, 99, 99,.5);
+    background-color: rgba(99, 99, 99,.5);
 }
 ::-webkit-scrollbar-thumb:horizontal 
 {
- background: #FF7F00;
-}
+    background: #FF7F00;
+}*/
