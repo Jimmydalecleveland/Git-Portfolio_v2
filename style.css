@@ -400,3 +400,54 @@ p
 {
     background: black;
 }
+
+@media screen and (max-height: 700px) {
+    .header
+    {
+        height: 40px;
+    }
+    .footer
+    {
+        height: 10px;
+    }
+
+    .nav-links
+    {
+        padding-top: 0px;
+        margin-top: -20px;
+    }
+
+    #container
+    {
+        top: 43px;
+        bottom: 10px;
+    }
+
+    .home-section
+    {
+        height: 450px; 
+    }
+
+    .panel-wrapper
+    {
+    margin-top: -250px;
+    }
+
+    .panel, .panel-condensed
+    {
+        height: 450px;
+        padding: 20px;
+    }
+
+    .hero-pic
+    {
+        height: 260px;
+        width: 486px;
+    }
+
+    .sub-pic-left, .sub-pic-right
+    {
+        height: 179px;
+        width: 234px;
+    }
+}
