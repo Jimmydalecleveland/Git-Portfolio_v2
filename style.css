@@ -380,7 +380,7 @@ p
     background: black;
 }
 
-@media screen and (max-height: 700px) {
+@media screen and (max-height: 820px) {
     .header
     {
         height: 40px;
@@ -418,6 +418,11 @@ p
         padding: 20px;
     }
 
+    .image-panel
+    {
+        width: 486px;
+    }    
+
     .hero-pic
     {
         height: 260px;
@@ -428,5 +433,28 @@ p
     {
         height: 179px;
         width: 234px;
+    }
+
+    .sub-pic-right
+    {
+        margin-left: 14px;
+    }
+
+    .side-panel-top
+    {
+        width: 365px;
+        height: 330px;
+        margin-left: 29px;
+    }
+
+    .side-panel-bottom
+    {
+        width: 384px;
+        margin-top: 15px;
+    }
+
+    .portfolio-link
+    {
+        margin-left: 105px;
     }
 }
