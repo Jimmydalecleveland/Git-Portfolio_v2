@@ -401,7 +401,7 @@ p
     background: black;
 }
 
-@media screen and (max-height: 700px) {
+@media screen and (max-height: 820px) {
     .header
     {
         height: 40px;
