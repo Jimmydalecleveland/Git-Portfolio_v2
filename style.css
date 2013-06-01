@@ -263,7 +263,7 @@ p
     background-color: rgba(0, 0, 0, .2);
     box-shadow: 0px 0px 15px 0px #444;
 }
-.panel-condensed
+.panel-condensed, .screenshot-panel
 {
     float: left;
     width: 910px;
@@ -273,6 +273,7 @@ p
     background-color: rgba(0, 0, 0, .2);
     box-shadow: 0px 0px 15px 0px #444;
 }
+
 .current-project
 {
     position: absolute;
@@ -345,6 +346,12 @@ p
     {    
         margin-left: 16px;
     }
+
+.large-pic
+{
+    width: 910px;
+    height: 530px;
+}
     
 .side-panel-top
 {
@@ -466,6 +473,12 @@ p
         margin-top: -20px;
     }
 
+    .breadcrumbs
+    {
+        padding-top: 0px;
+        margin-top: -20px;
+    }
+
     #container
     {
         top: 43px;
@@ -482,8 +495,15 @@ p
     margin-top: -250px;
     }
 
-    .panel, .panel-condensed
+    .panel
     {
+        height: 450px;
+        padding: 20px;
+    }
+
+    .panel-condensed, .screenshot-panel
+    {
+        width: 773px;
         height: 450px;
         padding: 20px;
     }
@@ -506,7 +526,13 @@ p
     }
     .sub-pic-right
     {
-        margin-left: 14px;
+        margin-left: 13px;
+    }
+
+    .large-pic
+    {
+        width: 773px;
+        height: 450px;
     }
 
     .side-panel-top
@@ -519,11 +545,46 @@ p
     .side-panel-bottom
     {
         width: 384px;
+        height: 97px;
         margin-top: 15px;
     }
 
     .portfolio-link
     {
+        height: 20px;
+        width: 145px;
+        font-size: 18px;
         margin-left: 105px;
+        bottom: 190px;
     }
+
+.current-project
+{
+    height: 20px;
+    width: 140px;
+    margin-left: 115px;
+    margin-top: -20px;
+    text-shadow: 0px 0px 18px #ffffff;
+    font-size: 20px;
+    letter-spacing: 3px;
+    line-height: 22px;
+}
+.current-project:before
+{
+    border-top: 50px solid transparent;
+    border-bottom:  20px solid #FF7F00;
+    border-left: 19px solid transparent;
+    border-right: 0px solid #FF7F00;
+    top: -50px;
+    left: -19px;
+}
+.current-project:after
+{
+    border-top: 20px solid #FF7F00;
+    border-bottom: 50px solid transparent;
+    border-left: 0px solid transparent;
+    border-right: 20px solid transparent;
+    top: 0;
+    right: -19px;
+}
 }
