@@ -30,6 +30,17 @@ h1 {
     height: 450px;
 }
 
+#proceed-div
+{
+    margin-left: 25px;
+    margin-top: 10px;
+}
+
+#direction-arrow
+{
+    margin-top: -20px;
+}
+
 .contact-section {
     width: 330px;
     height: 450px;

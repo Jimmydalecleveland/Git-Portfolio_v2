@@ -199,6 +199,19 @@ p
         background-color: #222222;
     }
 
+#proceed-div
+{
+   float: left; 
+   margin-left: 60px; 
+   clear: both; 
+   margin-top: 40px; 
+}
+
+#proceed-text
+{
+    font-size: 20px;
+}
+
 .contact-section
 {
    height: 530px;
