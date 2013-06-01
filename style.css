@@ -425,7 +425,7 @@ p
 }
 
 /* Scrollbar */
-::-webkit-scrollbar 
+/*::-webkit-scrollbar 
 {
      width: 10px;
      height: 2px;
@@ -448,7 +448,7 @@ p
 ::-webkit-scrollbar-thumb:horizontal 
 {
     background: black;
-}
+}*/
 
 @media screen and (max-height: 820px) {
     .header

@@ -5,7 +5,7 @@
         <link href="http://fonts.googleapis.com/css?family=Share+Tech" rel="stylesheet" type="text/css">
         <link href="http://fonts.googleapis.com/css?family=Share+Tech+Mono" rel="stylesheet" type="text/css">
         <link rel="stylesheet" type="text/css" href="style.css">
-        <link rel="stylesheet" type="text/css" href="jquery.jscrollpane.css">
+        <link rel="stylesheet" type="text/css" href="css/jquery.mCustomScrollbar.css">
         <title>Jimmy Cleveland</title>
     </head>
     <body>
@@ -24,7 +24,6 @@
         </div><!-- /nav-bar -->
         <!-- container -->
         <div id="container">
-            <div id="scrollable">
                 <!-- panel-wrapper -->
                 <div class="panel-wrapper">
                     <div id="home" class="home-section">
@@ -164,7 +163,6 @@
                     </div>
 
                 </div><!-- /panel-wrapper -->
-            </div>
         </div><!-- /container -->
         <!-- footer -->
         <div class="footer">
@@ -172,6 +170,7 @@
         <!-- Scripts -->
         <script type="text/javascript" src="jquery-1.9.1.min.js"></script>
         <script type="text/javascript" src="jquery.mousewheel.js"></script>
+        <script type="text/javascript" src="js/jquery.mCustomScrollbar.concat.min.js"></script>
         <script>
             //$(".nav-links li").on("click", function () {
             //    var width = 1200 // Width of each section
@@ -181,34 +180,55 @@
             //    $(".nav-links li").removeClass('active');
             //    $(this).addClass('active');
             //});
-            
-            $("#contact").click(function() {
+
+            //$('.contact').mouseover(function(event) {
+            //    $('.contact').css({ height: "10px" });
+            //    $(this).css({height: "10px"});
+            //}
+
+            // mCustomScrollbar
+            (function ($) {
+                $(window).load(function () {
+                    $('#container').mCustomScrollbar({
+                        horizontalScroll: true,
+                        theme: dark
+                    });
+                });
+            })(jQuery);
+
+            $("#contact").click(function () {
                 $('#container').animate({
-                    scrollLeft: $(".contact-section").offset().left }, 2000);
+                    scrollLeft: $(".contact-section").offset().left
+                }, 2000);
             })
-            $("#home").click(function() {
+            $("#home").click(function () {
                 $('#container').animate({
-                    scrollLeft: $(".home-section").offset().left }, 2000);
+                    scrollLeft: $(".home-section").offset().left
+                }, 2000);
             })
-            
+
             //Table of contents scrollTos
-            $("#COH").click(function() {
+            $("#COH").click(function () {
                 $('#container').animate({
-                    scrollLeft: $("#COH-section").offset().left - 450}, 1200);
+                    scrollLeft: $("#COH-section").offset().left - 450
+                }, 1200);
             })
-            $("#AFAF").click(function() {
+            $("#AFAF").click(function () {
                 $('#container').animate({
-                    scrollLeft: $("#AFAF-section").offset().left - 450}, 1200);
+                    scrollLeft: $("#AFAF-section").offset().left - 450
+                }, 1200);
             })
-            $("#FG").click(function() {
+            $("#FG").click(function () {
                 $('#container').animate({
-                    scrollLeft: $("#FG-section").offset().left - 450}, 1200);
+                    scrollLeft: $("#FG-section").offset().left - 450
+                }, 1200);
             })
-            $("#OMP").click(function() {
+            $("#OMP").click(function () {
                 $('#container').animate({
-                    scrollLeft: $("#OMP-section").offset().left - 450}, 1200);
+                    scrollLeft: $("#OMP-section").offset().left - 450
+                }, 1200);
             })
-            
+
             // jquery mousewheel scroll horizontal
             $(document).ready(function () {
                 $('#container')
@@ -218,6 +238,9 @@
                     event.preventDefault();
                 });
             });
+
+
+
             //$(function () {
             //    $("html, body, *").mousewheel(function (event, delta) {
             //        this.scrollLeft -= (delta * 30);
