@@ -25,10 +25,9 @@
         <div id="container">
                 <!-- panel-wrapper -->
                 <div class="panel-wrapper">
-                    <div id="home" class="home-section" style="text-align: center;">
-                        <h1 style="text-align: center;">Jimmy Cleveland's<br />Portfolio</h1>
-                        <p style="font-size: 20px;">Use the links below to zip to each project
-                        </p>
+                    <div class="home-section">
+                        <h1>Jimmy Cleveland's<br />Portfolio</h1>
+                        <p style="font-size: 20px;">Use the links below to zip to each project</p>
                         <div class="table-of-contents">
                             <a class="project-link" id="COH" href="#">Cottages of Hope</a>
                             <a class="project-link" id="FG" href="#">FancyGiraffe</a>
@@ -39,7 +38,7 @@
                         <br />
                         <img src="images/arrow2.png" alt="direction-arrow">
                     </div>
-                    <div id="portfolio" class="portfolio-section">
+                    <div class="portfolio-section">
 
 
                         <!-- Cottages of Hope -->
@@ -156,11 +155,11 @@
 
 
                     </div><!-- /portfolio-section -->
-                    <div id="contact-section" class="contact-section">
+                    <div class="contact-section">
                         <h1>Contact Info</h1>
-                        <img src="images/Contact_Address_dark.png" class="address-icon" alt="contact icon" height="75" width="75" /><div class="address-info">5376 South 300 West<br />Washington Terrace, UT 84405</div><br />
-                        <img src="images/Contact_Mail_dark.png" alt="contact icon" class="mail-icon" height="75" width="75" /><div class="mail-info">jimmydalecleveland@gmail.com</div>
-                        <img src="images/Contact_Phone_dark.png" alt="contact icon" height="75" class="phone-icon" width="75" /><div class="phone-info">801-452-3265</div>
+                        <img src="images/Contact_Address_light-small.png" class="address-icon" alt="contact icon" height="75" width="75" /><div class="address-info">5376 South 300 West<br />Washington Terrace, UT 84405</div><br />
+                        <img src="images/Contact_Mail_light-small.png" alt="contact icon" class="mail-icon" height="75" width="75" /><div class="mail-info">jimmydalecleveland@gmail.com</div>
+                        <img src="images/Contact_Phone_light-small.png" alt="contact icon" height="75" class="phone-icon" width="75" /><div class="phone-info">801-452-3265</div>
                     </div>
 
                 </div><!-- /panel-wrapper -->
@@ -171,18 +170,42 @@
         <!-- Scripts -->
         <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
         <script type="text/javascript" src="js/jquery.mousewheel.min.js"></script>
+        <script type="text/javascript" src="js/waypoints.min.js"></script>
         <script>
+
+            $('.home-section').waypoint(function (direction) {
+                $(".nav-links li").removeClass('active');
+                $('#home').addClass('active');
+             }, { horizontal: true
+            });
+
+            $('.portfolio-section').waypoint(function (direction) {
+                $(".nav-links li").removeClass('active');
+                $('#portfolio').addClass('active');
+             }, { horizontal: true
+            });
+
+            $('.contact-section').waypoint(function (direction) {
+                $(".nav-links li").removeClass('active');
+                $('#contact').addClass('active');
+             }, { horizontal: true
+            });
+
 
             // Navbar scrollTos
             $("#contact").click(function () {
                 $('#container').animate({
                     scrollLeft: $(".contact-section").offset().left
                 }, 2000);
+                $(".nav-links li").removeClass('active');
+                $(this).addClass('active');
             })
             $("#home").click(function () {
                 $('#container').animate({
                     scrollLeft: $(".home-section").offset().left
                 }, 2000);
+                $(".nav-links li").removeClass('active');
+                $(this).addClass('active');
             })
 
             // Table of contents scrollTos
@@ -227,7 +250,7 @@
             //    });
             //});
 
-                        //$(".nav-links li").on("click", function () {
+            //$(".nav-links li").on("click", function () {
             //    var width = 1200 // Width of each section
             //    var index = $(this).index();
             //    var position = width * index;

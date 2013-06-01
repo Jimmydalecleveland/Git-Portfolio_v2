@@ -12,7 +12,7 @@
 html, body{
     margin: 0;
     padding: 0px;
-    background-image: url('../images/grey_@2x.png');
+    background-image: url('../images/grey_@2X.png');
     color: black;
     height: 100%;    
     font-family: 'Share Tech', sans-serif;
@@ -168,6 +168,7 @@ p
     width: 390px;
     box-shadow: 0px 0px 15px 0px #444;
     background-color: rgba(0, 0, 0, .15);
+    text-align: center;
 }
 .home-section
 {
@@ -381,6 +382,7 @@ p
     float: left;
     font-family: 'Share Tech', sans-serif;
     font-size: 18px;
+    font-weight: bold;
     line-height: 20px;
     color: black;
     margin-left: 20px;
@@ -398,7 +400,8 @@ p
     float: left;
     clear: right;
     font-family: 'Share Tech', sans-serif;
-    font-size: 20px;
+    font-size: 18px;
+    font-weight: bold;
     line-height: 20px;
     color: black;
     margin-top: 45px;
@@ -416,7 +419,8 @@ p
     float: left;
     clear: right;
     font-family: 'Share Tech', sans-serif;
-    font-size: 20px;
+    font-weight: bold;
+    font-size: 18px;
     line-height: 20px;
     color: black;
     margin-top: 45px;
