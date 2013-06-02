@@ -72,46 +72,79 @@ p
     bottom: 0;
 }
 
+.clear
+{
+    clear: both; /* for drop-down menus */
+}
 .nav-container
 {
     position: relative;
 }
-.nav-links
+#nav
 {
     font-family: 'Share Tech', sans-serif;
     font-size: 26px;
     padding-top: 20px;
+    list-style-type: none;
 }
-    .nav-links li
+    #nav li
     {
-        list-style-type: none;
         display: inline;
+        float: left;
         margin-left: 50px;
         cursor: pointer;
         color: #727272;
+        position: relative;
+        z-index: 999;
     }
-        .nav-links li:hover
-        {
-            color: white;
-            text-shadow: 0 0 5px black;
-        }
-        .nav-links li.active
-        {
-            color:  black;
-        }
-        .nav-links li.active:hover
-        {
-            text-shadow: none;
-        }
-    .nav-links a
+    
+    /* parent nav menu */
+    #nav li a
     {
         text-decoration: none;
         color: #727272;
     }
-        .nav-links a:hover
+    #nav li a:hover
+    {
+        color: white;
+        text-shadow: 0 0 5px black;
+    }
+    #nav li a.active
+    {
+        color:  black;
+    }
+    #nav li a.active:hover
+    {
+        text-shadow: none;
+    }
+
+        /* drop-down menu */
+        #nav ul
         {
-            color: white;
-            text-shadow: 0 0 5px black;
+            display: none;
+            position: absolute;
+            left: -15px;
+            top: 0;
+            padding: 0;
+            list-style: none;
+            background-color: #FF7F00;
+            color: black;
+            list-style: none;
+            border-top: solid #ccc 44px;
+            z-index: -2;
+        }
+        #nav ul li
+        {
+            width: 130px;
+            float: left;
+        }
+        #nav ul a
+        {
+            display: block;
+            padding: 5px;
+            color: black;
+            font-size: 18px;
+            margin-left: -42px;
         }
 
 .breadcrumbs 
