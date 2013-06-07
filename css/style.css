@@ -12,7 +12,7 @@
 html, body{
     margin: 0;
     padding: 0px;
-    background-image: url('../images/grey_@2x.png');
+    background-image: url('../images/grey_@2X.png');
     color: black;
     height: 100%;    
     font-family: 'Share Tech', sans-serif;
@@ -72,46 +72,79 @@ p
     bottom: 0;
 }
 
+.clear
+{
+    clear: both; /* for drop-down menus */
+}
 .nav-container
 {
     position: relative;
 }
-.nav-links
+#nav
 {
     font-family: 'Share Tech', sans-serif;
     font-size: 26px;
     padding-top: 20px;
+    list-style-type: none;
 }
-    .nav-links li
+    #nav li
     {
-        list-style-type: none;
         display: inline;
+        float: left;
         margin-left: 50px;
         cursor: pointer;
         color: #727272;
+        position: relative;
+        z-index: 999;
     }
-        .nav-links li:hover
-        {
-            color: white;
-            text-shadow: 0 0 5px black;
-        }
-        .nav-links li.active
-        {
-            color:  black;
-        }
-        .nav-links li.active:hover
-        {
-            text-shadow: none;
-        }
-    .nav-links a
+    
+    /* parent nav menu */
+    #nav li a
     {
         text-decoration: none;
         color: #727272;
     }
-        .nav-links a:hover
+    #nav li a:hover
+    {
+        color: white;
+        text-shadow: 0 0 5px black;
+    }
+    #nav li a.active
+    {
+        color:  black;
+    }
+    #nav li a.active:hover
+    {
+        text-shadow: none;
+    }
+
+        /* drop-down menu */
+        #nav ul
         {
-            color: white;
-            text-shadow: 0 0 5px black;
+            display: none;
+            position: absolute;
+            left: -15px;
+            top: 0;
+            padding: 0;
+            list-style: none;
+            background-color: #FF7F00;
+            color: black;
+            list-style: none;
+            border-top: solid #ccc 44px;
+            z-index: -2;
+        }
+        #nav ul li
+        {
+            width: 130px;
+            float: left;
+        }
+        #nav ul a
+        {
+            display: block;
+            padding: 5px;
+            color: black;
+            font-size: 18px;
+            margin-left: -42px;
         }
 
 .hover-menu
@@ -177,6 +210,7 @@ p
     width: 390px;
     box-shadow: 0px 0px 15px 0px #444;
     background-color: rgba(0, 0, 0, .15);
+    text-align: center;
 }
 .home-section
 {
@@ -403,6 +437,7 @@ p
     float: left;
     font-family: 'Share Tech', sans-serif;
     font-size: 18px;
+    font-weight: bold;
     line-height: 20px;
     color: black;
     margin-left: 20px;
@@ -420,7 +455,8 @@ p
     float: left;
     clear: right;
     font-family: 'Share Tech', sans-serif;
-    font-size: 20px;
+    font-size: 18px;
+    font-weight: bold;
     line-height: 20px;
     color: black;
     margin-top: 45px;
@@ -438,7 +474,8 @@ p
     float: left;
     clear: right;
     font-family: 'Share Tech', sans-serif;
-    font-size: 20px;
+    font-weight: bold;
+    font-size: 18px;
     line-height: 20px;
     color: black;
     margin-top: 45px;
