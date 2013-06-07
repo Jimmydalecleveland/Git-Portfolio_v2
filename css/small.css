@@ -10,6 +10,16 @@ h1 {
     height: 10px;
 }
 
+#nav
+{
+    margin-top: -13px;
+}
+
+#nav ul
+{
+    border-top: solid #ccc 33px;
+}
+
 .nav-links {
     padding-top: 0px;
     margin-top: -20px;
