@@ -24,6 +24,7 @@ h1
     color: black;
     font-weight: normal;
     text-shadow: 1px 1px 1px #ffffff;
+    -webkit-text-stroke: .25px;
 }
 h2
 {
@@ -33,6 +34,7 @@ h2
     color: black;
     font-weight: normal;
     text-shadow: 1px 1px 1px #ffffff;
+    -webkit-text-stroke: .25px;
 }
 h4
 {
@@ -44,11 +46,13 @@ h4
     font-family: 'Share Tech', sans-serif; 
     font-size: 18px;
     font-weight: normal;
+    -webkit-text-stroke: .25px;
 }
 p
 {
     font-size: 18px;
     line-height: 22px;
+    -webkit-text-stroke: .25px;
 }
 
 .header, .footer
@@ -200,8 +204,9 @@ p
 {
     width: 390px;
     box-shadow: 0px 0px 15px 0px #444;
-    background-color: rgba(0, 0, 0, .15);
+    background-color: #eeeeee;
     text-align: center;
+    font-size: 20px;
 }
 .home-section
 {
@@ -418,12 +423,13 @@ p
     background-color: #353535;
 }
 
-.address-icon
+.linkedin-icon
 {
     float: left;
     margin-left: 20px;
+    margin-top: 30px;
 }
-.address-info
+.linkedin-info
 {
     float: left;
     font-family: 'Share Tech', sans-serif;
@@ -432,8 +438,16 @@ p
     line-height: 20px;
     color: black;
     margin-left: 20px;
-    margin-top: 15px;
+    margin-top: 55px;
 }
+    .linkedin-info a
+    {
+        color: black;
+    }
+    .linkedin-info a:visited
+    {
+        color: black;
+    }
 .mail-icon
 {
     float: left;
