@@ -163,7 +163,7 @@
                     </div><!-- /portfolio-section -->
                     <div class="contact-section">
                         <h1>Contact Info</h1>
-                        <img src="images/Contact_Address_light-small.png" class="address-icon" alt="contact icon" height="75" width="75" /><div class="address-info">5376 South 300 West<br />Washington Terrace, UT 84405</div><br />
+                        <img src="images/Contact_LinkedIn.png" class="linkedin-icon" alt="linkedin icon" height="75" width="75" /><div class="linkedin-info"><a href="http://www.linkedin.com/profile/view?id=149908050&trk=hb_tab_pro_top">Visit my LinkedIn</a></div>
                         <img src="images/Contact_Mail_light-small.png" alt="contact icon" class="mail-icon" height="75" width="75" /><div class="mail-info">jimmydalecleveland@gmail.com</div>
                         <img src="images/Contact_Phone_light-small.png" alt="contact icon" height="75" class="phone-icon" width="75" /><div class="phone-info">801-452-3265</div>
                     </div>
@@ -218,7 +218,7 @@
             $("#contact").click(function () {
                 $('#container').animate({
                     scrollLeft: $(".contact-section").offset().left
-                }, 1700, 'easeInOutQuint');
+                }, (1700 - window.pageYOffset), 'easeInOutQuint');
                 $("#nav li a").removeClass('active');
                 $(this).addClass('active');
             })
