@@ -3,6 +3,11 @@ h1
     font-size: 32px;
 }
 
+#afaf-intro
+{
+    font-size: 18px;
+}
+
 /* ----------------------- */
 /*     Header / Footer     */
 /* ----------------------- */
@@ -54,9 +59,18 @@ h1
 
 .home-section 
 {
-    padding: 20px 20px;
+    padding: 20px;
     width: 330px;
     height: 450px;
+}
+
+#omp-introtext
+{
+    height: 300px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    padding-right: 20px;
+    padding-left: 10px;
 }
 
 .panel 
@@ -181,6 +195,7 @@ h1
     width: 773px;
     height: 450px;
     padding: 20px;
+    margin-right: 170px;
 }
 
 .large-pic 
