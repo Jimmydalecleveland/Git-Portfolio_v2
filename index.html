@@ -161,7 +161,7 @@
 
 
                     </div><!-- /portfolio-section -->
-                    <div class="contact-section">
+                    <div class="contact-section" id="contact-section">
                         <h1>Contact Info</h1>
                         <img src="images/Contact_LinkedIn.png" class="linkedin-icon" alt="linkedin icon" height="75" width="75" /><div class="linkedin-info"><a href="http://www.linkedin.com/profile/view?id=149908050&trk=hb_tab_pro_top">Visit my LinkedIn</a></div>
                         <img src="images/Contact_Mail_light-small.png" alt="contact icon" class="mail-icon" height="75" width="75" /><div class="mail-info">jimmydalecleveland@gmail.com</div>
@@ -179,11 +179,8 @@
         <script type="text/javascript" src="js/waypoints.min.js"></script>
         <script type="text/javascript" src="js/jquery.easing.min.js"></script>
         <script>
-
             $(document).ready(function () {
-
                 $('#nav li').hover(
-
                     function () {
                         //show sub-menu
                         $('ul', this).stop(true, true).slideDown(100);
@@ -194,36 +191,34 @@
                     }
                 );
             });
-
             //$('.home-section').waypoint(function (direction) {
             //    $(".nav-links li").removeClass('active');
             //    $('#home').addClass('active');
             //}, { horizontal: true
             //});
-
             //$('.portfolio-section').waypoint(function (direction) {
             //    $(".nav-links li").removeClass('active');
             //    $('#portfolio').addClass('active');
             //}, { horizontal: true
             //});
-
             //$('.contact-section').waypoint(function (direction) {
             //    $(".nav-links li").removeClass('active');
             //    $('#contact').addClass('active');
             //}, { horizontal: true
             //});
 
-
             // Navbar scrollTos
             $("#contact").click(function () {
-                $('#container').animate({
-                    scrollLeft: $(".contact-section").offset().left
-                }, (1700 - window.pageYOffset), 'easeInOutQuint');
+                //if (($(window).scrollLeft() != ($(".panel-wrapper").width()) - $(window).width())) {
+                    $('#container').stop().animate({
+                        scrollLeft: $(".panel-wrapper").width()
+                    }, 2000, 'easeInOutQuint');
+                //}
                 $("#nav li a").removeClass('active');
                 $(this).addClass('active');
             })
             $("#home").click(function () {
-                $('#container').animate({
+                $('#container').stop().animate({
                     scrollLeft: $(".home-section").offset().left
                 }, 1500, 'easeInOutQuint');
                 $("#nav li a").removeClass('active');
@@ -236,7 +231,6 @@
                 $("#nav li a").removeClass('active');
                 $(this).addClass('active');
             })
-
             // Drop-down and Table of contents scrollTos
             $("#COH-top, #COH-side").click(function () {
                 $('#container').animate({
@@ -245,7 +239,6 @@
                 $("#nav li a").removeClass('active');
                 $("#portfolio").addClass('active');
             })
-
             $("#AFAF-top, #AFAF-side").click(function () {
                 $('#container').animate({
                     scrollLeft: $("#AFAF-section").offset().left - 450
@@ -267,7 +260,6 @@
                 $("#nav li a").removeClass('active');
                 $("#portfolio").addClass('active');
             })
-
             // JQuery mousewheel scroll horizontal
             $(document).ready(function () {
                 $('#container')
@@ -278,16 +270,13 @@
                 });
             });
 
-
             // Backup functions ---------------------------------------
-
             //$(function () {
             //    $("html, body, *").mousewheel(function (event, delta) {
             //        this.scrollLeft -= (delta * 30);
             //        event.preventDefault();
             //    });
             //});
-
             //$(".nav-links li").on("click", function () {
             //    var width = 1200 // Width of each section
             //    var index = $(this).index();
@@ -296,7 +285,6 @@
             //    $(".nav-links li").removeClass('active');
             //    $(this).addClass('active');
             //});
-
             //$('.contact').mouseover(function(event) {
             //    $('.contact').css({ height: "10px" });
             //    $(this).css({height: "10px"});
