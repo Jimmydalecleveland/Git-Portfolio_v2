@@ -36,6 +36,7 @@ h1 {
 }
 
 .home-section {
+    padding: 20px 20px;
     width: 330px;
     height: 450px;
 }
@@ -52,7 +53,8 @@ h1 {
 }
 
 .contact-section {
-    width: 330px;
+    padding: 20px 20px;
+    width: 350px;
     height: 450px;
 }
 

@@ -198,7 +198,7 @@
             // Navbar scrollLefts --------------------------------------
             $("#contact").click(function () {
                 $('#container').stop().animate({
-                    scrollLeft: $(document).width() + $(window).width()
+                    scrollLeft: $('.panel-wrapper').width() -$(window).width()
                 }, 1500, 'easeInOutQuint');
                 $("#nav li a").removeClass('active');
                 $(this).addClass('active');
