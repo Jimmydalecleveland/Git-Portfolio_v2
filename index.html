@@ -160,7 +160,6 @@
                         </div>
                     </div>
 
-
                 </div><!-- /portfolio-section -->
                 <div class="contact-section">
                     <h1>Contact Info</h1>
@@ -180,12 +179,11 @@
         <script type="text/javascript" src="js/jquery.easing.min.js"></script>
         <script>
 
-            
             // Dropdown menu ----------------------------------------
             $(document).ready(function () {
             
                 $('#nav li').hover(
-            
+
                     function () {
                         //show sub-menu
                         $('ul', this).stop(true, true).slideDown(100);
@@ -196,8 +194,7 @@
                     }
                 );
             });
-            
-            
+
             // Navbar scrollLefts --------------------------------------
             $("#contact").click(function () {
                 $('#container').stop().animate({
@@ -221,7 +218,7 @@
                 $("#nav li a").removeClass('active');
                 $(this).addClass('active');
             })
-            
+
             // Drop-down and Table of contents scrollTos --------------
             $("#COH-top, #COH-side").click(function () {
                 $('#container').stop().animate({
@@ -230,7 +227,7 @@
                 $("#nav li a").removeClass('active');
                 $("#portfolio").addClass('active');
             })
-            
+
             $("#FG-top, #FG-side").click(function () {
                 var leftPos = $('#container').scrollLeft();
                 $('#container').stop().animate({
@@ -255,7 +252,7 @@
                 $("#nav li a").removeClass('active');
                 $("#portfolio").addClass('active');
             })
-            
+
             // JQuery mousewheel scroll horizontal
             $(document).ready(function () {
                 $('#container')
@@ -265,17 +262,15 @@
                     event.preventDefault();
                 });
             });
-            
-            
+
             // Backup functions ---------------------------------------
-            
             //$(function () {
             //    $("html, body, *").mousewheel(function (event, delta) {
             //        this.scrollLeft -= (delta * 30);
             //        event.preventDefault();
             //    });
             //});
-            
+
             //$(".nav-links li").on("click", function () {
             //    var width = 1200 // Width of each section
             //    var index = $(this).index();
@@ -284,7 +279,7 @@
             //    $(".nav-links li").removeClass('active');
             //    $(this).addClass('active');
             //});
-            
+
             //$('.contact').mouseover(function(event) {
             //    $('.contact').css({ height: "10px" });
             //    $(this).css({height: "10px"});
@@ -311,3 +306,4 @@
         </script>
     </body>
 </html>
+

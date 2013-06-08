@@ -10,6 +10,16 @@ h1 {
     height: 10px;
 }
 
+#nav
+{
+    margin-top: -13px;
+}
+
+#nav ul
+{
+    border-top: solid #ccc 33px;
+}
+
 .nav-links {
     padding-top: 0px;
     margin-top: -20px;
@@ -133,7 +143,7 @@ h1 {
     right: -19px;
 }
 
-.address-icon, .mail-icon, .phone-icon {
+.address-icon, .mail-icon, .phone-icon, .linkedin-icon {
     width: 60px;
     height: 60px;
     margin-left: 0px;

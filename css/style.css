@@ -150,6 +150,15 @@ p
             margin-left: -42px;
         }
 
+.hover-menu
+{
+    
+}
+    .hover-menu li
+    {
+        display: list-item;
+    }
+
 .breadcrumbs 
 {
     font-family: 'Share Tech', sans-serif;
@@ -517,3 +526,4 @@ p
 {
     background: black;
 }*/
+
